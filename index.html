@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <title>NuviOS — O Sistema Operacional do Futuro</title>
+  <meta name="description" content="NuviOS é um sistema operacional independente em desenvolvimento, focado em desempenho, simplicidade e experiência para jogos. Conheça o projeto e apoie o desenvolvimento." />
+  <meta name="keywords" content="NuviOS, sistema operacional, OS, gaming, desempenho, open source, projeto independente, linux, kernel, interface moderna" />
+  <meta name="author" content="NuviOS Team" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nuvios.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nuvios.github.io/" />
+  <meta property="og:title" content="NuviOS — O Sistema Operacional do Futuro" />
+  <meta property="og:description" content="NuviOS é um sistema operacional independente focado em desempenho, simplicidade e experiência para jogos. Apoie o projeto." />
+  <meta property="og:image" content="img/hero-os.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="NuviOS" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://nuvios.github.io/" />
+  <meta name="twitter:title" content="NuviOS — O Sistema Operacional do Futuro" />
+  <meta name="twitter:description" content="NuviOS é um sistema operacional independente focado em desempenho, simplicidade e experiência para jogos." />
+  <meta name="twitter:image" content="img/hero-os.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png" />
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <meta name="theme-color" content="#00d4ff" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="js/script.js" as="script" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- Particles Background -->
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="nav__logo" aria-label="NuviOS - Página inicial">
+        <img src="img/logo-oficial.png" alt="NuviOS Logo" class="nav__logo-img" />
+      </a>
+
+      <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="#inicio" class="nav__link" aria-label="Ir para Início">Início</a></li>
+        <li><a href="#sobre" class="nav__link" aria-label="Ir para Sobre">Sobre</a></li>
+        <li><a href="#recursos" class="nav__link" aria-label="Ir para Recursos">Recursos</a></li>
+        <li><a href="#roadmap" class="nav__link" aria-label="Ir para Roadmap">Roadmap</a></li>
+        <li><a href="#galeria" class="nav__link" aria-label="Ir para Galeria">Galeria</a></li>
+        <li><a href="#comunidade" class="nav__link" aria-label="Ir para Comunidade">Comunidade</a></li>
+        <li><a href="#doacoes" class="nav__link nav__link--highlight" aria-label="Ir para Doações">Doações</a></li>
+        <li><a href="#faq" class="nav__link" aria-label="Ir para FAQ">FAQ</a></li>
+        <li><a href="#contato" class="nav__link" aria-label="Ir para Contato">Contato</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio" aria-label="Seção principal">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <div class="hero__badge" aria-label="Status do projeto">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Em Desenvolvimento Ativo
+          </div>
+          <h1 class="hero__title">
+            O Sistema Operacional<br />
+            <span class="hero__title-accent">do Futuro</span>
+          </h1>
+          <p class="hero__subtitle">
+            NuviOS é um sistema operacional independente construído do zero,
+            projetado para máximo desempenho, interface elegante e experiência
+            imersiva para jogos.
+          </p>
+          <div class="hero__actions">
+            <a href="#sobre" class="btn btn--primary" aria-label="Conheça o projeto NuviOS">
+              <span>Conheça o Projeto</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#doacoes" class="btn btn--secondary" aria-label="Apoie o NuviOS com uma doação">
+              <span>Apoie o NuviOS</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </a>
+          </div>
+          <div class="hero__stats" role="list" aria-label="Estatísticas do projeto">
+            <div class="hero__stat" role="listitem">
+              <span class="stat__number" data-count="100">0</span><span class="stat__symbol">%</span>
+              <span class="stat__label">Independente</span>
+            </div>
+            <div class="hero__stat" role="listitem">
+              <span class="stat__number" data-count="10">0</span>
+              <span class="stat__label">Etapas no Roadmap</span>
+            </div>
+            <div class="hero__stat" role="listitem">
+              <span class="stat__number" data-count="8">0</span>
+              <span class="stat__label">Recursos Planejados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal reveal--right">
+          <div class="hero__image-wrapper">
+            <div class="hero__image-glow" aria-hidden="true"></div>
+            <img
+              src="img/hero-os.png"
+              alt="Interface futurista do NuviOS mostrando o ambiente de desktop com elementos neon e glassmorphism"
+              class="hero__image"
+              width="720"
+              height="405"
+              loading="eager"
+            />
+            <div class="hero__image-overlay" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-label="Rolar para baixo">
+        <a href="#sobre" aria-label="Ir para a seção Sobre">
+          <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-dot"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section sobre" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Sobre o Projeto</span>
+          <h2 class="section__title" id="sobre-title">O que é o <span class="text-accent">NuviOS</span>?</h2>
+          <p class="section__subtitle">Um sistema operacional construído com propósito, paixão e visão de futuro.</p>
+        </div>
+
+        <div class="sobre__grid">
+          <div class="sobre__content reveal">
+            <p class="sobre__text">
+              O <strong>NuviOS</strong> é um sistema operacional em desenvolvimento ativo, criado de forma
+              completamente independente por um desenvolvedor apaixonado por tecnologia e jogos. Diferente
+              dos sistemas tradicionais, o NuviOS foi concebido desde o início com foco em três pilares
+              fundamentais: <strong>desempenho máximo</strong>, <strong>interface intuitiva</strong> e
+              <strong>experiência de jogo imersiva</strong>.
+            </p>
+            <p class="sobre__text">
+              Enquanto os sistemas operacionais convencionais carregam décadas de legado e compromissos
+              técnicos, o NuviOS parte de uma folha em branco. Cada linha de código, cada decisão de
+              arquitetura e cada elemento da interface foi pensado para oferecer algo genuinamente
+              diferente — mais rápido, mais limpo e mais focado no usuário moderno.
+            </p>
+            <p class="sobre__text">
+              O projeto é completamente <strong>open source</strong> e conta com a colaboração da
+              comunidade para crescer. Qualquer pessoa pode acompanhar o desenvolvimento, contribuir
+              com ideias e fazer parte dessa jornada de construir algo extraordinário do zero.
+            </p>
+            <div class="sobre__tags" role="list" aria-label="Características do NuviOS">
+              <span class="tag" role="listitem">Open Source</span>
+              <span class="tag" role="listitem">Gaming First</span>
+              <span class="tag" role="listitem">Alto Desempenho</span>
+              <span class="tag" role="listitem">Interface Moderna</span>
+              <span class="tag" role="listitem">Independente</span>
+            </div>
+          </div>
+
+          <div class="sobre__visual reveal reveal--right">
+            <div class="sobre__image-wrapper">
+              <img
+                src="img/about-visual.png"
+                alt="Visualização abstrata de circuitos e dados representando a tecnologia do NuviOS"
+                class="sobre__image"
+                width="600"
+                height="450"
+                loading="lazy"
+              />
+              <div class="sobre__cards" aria-hidden="true">
+                <div class="mini-card">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>Kernel Próprio</span>
+                </div>
+                <div class="mini-card mini-card--2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span>Interface Nativa</span>
+                </div>
+                <div class="mini-card mini-card--3">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Seguro por Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECURSOS ===== -->
+    <section class="section recursos" id="recursos" aria-labelledby="recursos-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Funcionalidades</span>
+          <h2 class="section__title" id="recursos-title">Recursos <span class="text-accent">Planejados</span></h2>
+          <p class="section__subtitle">Cada funcionalidade foi pensada para elevar sua experiência computacional.</p>
+        </div>
+
+        <div class="recursos__grid">
+
+          <article class="feature-card reveal" aria-label="Recurso: Desempenho">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-card__title">Desempenho</h3>
+            <p class="feature-card__desc">Arquitetura otimizada para extrair o máximo do hardware, com gerenciamento inteligente de CPU, RAM e GPU.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Interface Moderna">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="feature-card__title">Interface Moderna</h3>
+            <p class="feature-card__desc">Design minimalista e elegante com glassmorphism, animações fluidas e personalização completa do ambiente.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Inicialização Rápida">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="feature-card__title">Inicialização Rápida</h3>
+            <p class="feature-card__desc">Boot ultrarrápido com sequência de inicialização otimizada, do botão de ligar ao desktop em segundos.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Foco em Jogos">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="12" cy="8" r="4"/></svg>
+            </div>
+            <h3 class="feature-card__title">Foco em Jogos</h3>
+            <p class="feature-card__desc">Modo gaming dedicado que prioriza recursos para jogos, reduz latência e maximiza FPS automaticamente.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Leveza">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="feature-card__title">Leveza</h3>
+            <p class="feature-card__desc">Footprint mínimo no sistema. Sem processos desnecessários em segundo plano, sem bloatware, sem desperdício.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Segurança">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Segurança</h3>
+            <p class="feature-card__desc">Camadas de proteção nativas, isolamento de processos e atualizações de segurança automáticas e transparentes.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Atualizações Futuras">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </div>
+            <h3 class="feature-card__title">Atualizações Futuras</h3>
+            <p class="feature-card__desc">Sistema de atualização incremental e não intrusivo. Novas funcionalidades chegam sem reinicializações forçadas.</p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Recurso: Código Organizado">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="feature-card__title">Código Organizado</h3>
+            <p class="feature-card__desc">Base de código limpa, bem documentada e modular. Fácil de auditar, contribuir e expandir pela comunidade.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Progresso</span>
+          <h2 class="section__title" id="roadmap-title">Linha do <span class="text-accent">Tempo</span></h2>
+          <p class="section__subtitle">Cada etapa nos aproxima do sistema operacional que o mundo merece.</p>
+        </div>
+
+        <div class="roadmap__timeline" role="list" aria-label="Etapas do roadmap">
+
+          <div class="roadmap__item roadmap__item--done reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">01</span>
+              <h3 class="roadmap__title">Planejamento</h3>
+              <p class="roadmap__desc">Definição da arquitetura, objetivos, tecnologias e estrutura geral do sistema operacional.</p>
+              <span class="roadmap__status roadmap__status--done">Concluído</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item roadmap__item--done reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">02</span>
+              <h3 class="roadmap__title">Design</h3>
+              <p class="roadmap__desc">Criação da identidade visual, linguagem de design, paleta de cores e diretrizes da interface.</p>
+              <span class="roadmap__status roadmap__status--done">Concluído</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item roadmap__item--active reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true">
+              <div class="roadmap__pulse" aria-hidden="true"></div>
+            </div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">03</span>
+              <h3 class="roadmap__title">Protótipo</h3>
+              <p class="roadmap__desc">Desenvolvimento dos primeiros protótipos funcionais da interface e componentes do sistema.</p>
+              <span class="roadmap__status roadmap__status--active">Em Andamento</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">04</span>
+              <h3 class="roadmap__title">Kernel</h3>
+              <p class="roadmap__desc">Desenvolvimento do núcleo do sistema: gerenciamento de processos, memória e drivers essenciais.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">05</span>
+              <h3 class="roadmap__title">Interface</h3>
+              <p class="roadmap__desc">Implementação completa da interface gráfica, compositor de janelas e ambiente de desktop.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">06</span>
+              <h3 class="roadmap__title">Gerenciador de Arquivos</h3>
+              <p class="roadmap__desc">Sistema de arquivos nativo com interface moderna, busca inteligente e integração com a nuvem.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">07</span>
+              <h3 class="roadmap__title">Loja</h3>
+              <p class="roadmap__desc">Loja de aplicativos nativa com curadoria, instalação simplificada e sistema de avaliações.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">08</span>
+              <h3 class="roadmap__title">Versão Alpha</h3>
+              <p class="roadmap__desc">Primeira versão testável disponível para a comunidade. Funcionalidades básicas operacionais.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">09</span>
+              <h3 class="roadmap__title">Versão Beta</h3>
+              <p class="roadmap__desc">Sistema completo em fase de testes. Correção de bugs, otimizações e feedback da comunidade.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+          <div class="roadmap__item reveal" role="listitem">
+            <div class="roadmap__marker" aria-hidden="true"></div>
+            <div class="roadmap__content">
+              <span class="roadmap__step">10</span>
+              <h3 class="roadmap__title">Versão Final</h3>
+              <p class="roadmap__desc">Lançamento oficial do NuviOS 1.0. O sistema operacional do futuro disponível para todos.</p>
+              <span class="roadmap__status">Pendente</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="section galeria" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Prévia Visual</span>
+          <h2 class="section__title" id="galeria-title">Galeria de <span class="text-accent">Conceitos</span></h2>
+          <p class="section__subtitle">Visualizações conceituais do que o NuviOS será. Screenshots reais em breve.</p>
+        </div>
+
+        <div class="galeria__grid" role="list" aria-label="Galeria de imagens conceituais do NuviOS">
+          <figure class="galeria__item reveal" role="listitem" tabindex="0" aria-label="Conceito de desktop do NuviOS">
+            <img src="img/gallery-1.png" alt="Conceito de interface desktop do NuviOS com taskbar neon e ícones glassmorphism" loading="lazy" width="600" height="600" />
+            <figcaption class="galeria__caption">
+              <span>Desktop Concept</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </figcaption>
+          </figure>
+
+          <figure class="galeria__item reveal" role="listitem" tabindex="0" aria-label="Conceito de gerenciador de arquivos do NuviOS">
+            <img src="img/gallery-2.png" alt="Conceito do gerenciador de arquivos do NuviOS com pastas neon e sidebar glassmorphism" loading="lazy" width="600" height="600" />
+            <figcaption class="galeria__caption">
+              <span>File Manager Concept</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </figcaption>
+          </figure>
+
+          <figure class="galeria__item reveal" role="listitem" tabindex="0" aria-label="Conceito de configurações do NuviOS">
+            <img src="img/gallery-3.png" alt="Conceito do painel de configurações do NuviOS com toggles neon e cards glassmorphism" loading="lazy" width="600" height="600" />
+            <figcaption class="galeria__caption">
+              <span>Settings Panel Concept</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </figcaption>
+          </figure>
+
+          <figure class="galeria__item reveal" role="listitem" tabindex="0" aria-label="Conceito de game launcher do NuviOS">
+            <img src="img/gallery-4.png" alt="Conceito do game launcher do NuviOS com thumbnails de jogos e interface gaming" loading="lazy" width="600" height="600" />
+            <figcaption class="galeria__caption">
+              <span>Game Launcher Concept</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="galeria__note reveal" aria-label="Nota sobre as imagens">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Imagens conceituais geradas para ilustrar a visão do projeto. Screenshots reais serão adicionadas conforme o desenvolvimento avança.
+        </p>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagem" hidden>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Fechar visualizador">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img src="" alt="" class="lightbox__image" id="lightboxImage" />
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- ===== COMUNIDADE ===== -->
+    <section class="section comunidade" id="comunidade" aria-labelledby="comunidade-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Faça Parte</span>
+          <h2 class="section__title" id="comunidade-title">Nossa <span class="text-accent">Comunidade</span></h2>
+          <p class="section__subtitle">O NuviOS é construído com e para a comunidade. Junte-se a nós.</p>
+        </div>
+
+        <div class="comunidade__content">
+          <div class="comunidade__text reveal">
+            <p>
+              Qualquer pessoa pode acompanhar o desenvolvimento do NuviOS, contribuir com ideias,
+              reportar bugs, sugerir funcionalidades e fazer parte de uma comunidade apaixonada por
+              tecnologia e inovação. Seja você desenvolvedor, designer, gamer ou simplesmente curioso,
+              há espaço para todos nessa jornada.
+            </p>
+            <p>
+              Acompanhe o progresso em tempo real, participe das discussões e ajude a moldar o
+              futuro do NuviOS. Juntos, estamos construindo algo que nunca existiu antes.
+            </p>
+          </div>
+
+          <div class="comunidade__social reveal reveal--right" role="list" aria-label="Links para redes sociais do NuviOS">
+
+            <!-- EDITE OS LINKS ABAIXO -->
+            <a href="https://github.com/nuvios" target="_blank" rel="noopener noreferrer" class="social-card" role="listitem" aria-label="GitHub do NuviOS">
+              <div class="social-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="social-card__info">
+                <span class="social-card__name">GitHub</span>
+                <span class="social-card__desc">Código-fonte e contribuições</span>
+              </div>
+              <svg class="social-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://discord.gg/nuvios" target="_blank" rel="noopener noreferrer" class="social-card" role="listitem" aria-label="Discord do NuviOS">
+              <div class="social-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.056a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+              </div>
+              <div class="social-card__info">
+                <span class="social-card__name">Discord</span>
+                <span class="social-card__desc">Comunidade e discussões</span>
+              </div>
+              <svg class="social-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://youtube.com/@nuvios" target="_blank" rel="noopener noreferrer" class="social-card" role="listitem" aria-label="YouTube do NuviOS">
+              <div class="social-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </div>
+              <div class="social-card__info">
+                <span class="social-card__name">YouTube</span>
+                <span class="social-card__desc">Vídeos e devlogs</span>
+              </div>
+              <svg class="social-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://instagram.com/nuvios" target="_blank" rel="noopener noreferrer" class="social-card" role="listitem" aria-label="Instagram do NuviOS">
+              <div class="social-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </div>
+              <div class="social-card__info">
+                <span class="social-card__name">Instagram</span>
+                <span class="social-card__desc">Novidades e bastidores</span>
+              </div>
+              <svg class="social-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://x.com/nuvios" target="_blank" rel="noopener noreferrer" class="social-card" role="listitem" aria-label="X (Twitter) do NuviOS">
+              <div class="social-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div class="social-card__info">
+                <span class="social-card__name">X (Twitter)</span>
+                <span class="social-card__desc">Atualizações rápidas</span>
+              </div>
+              <svg class="social-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter reveal" aria-labelledby="newsletter-title">
+          <div class="newsletter__content">
+            <h3 class="newsletter__title" id="newsletter-title">Receba as Novidades</h3>
+            <p class="newsletter__desc">Cadastre-se para ser o primeiro a saber sobre atualizações, lançamentos e marcos do desenvolvimento.</p>
+          </div>
+          <form class="newsletter__form" id="newsletterForm" novalidate aria-label="Formulário de cadastro para newsletter">
+            <div class="newsletter__input-group">
+              <label for="newsletterEmail" class="sr-only">Seu endereço de e-mail</label>
+              <input
+                type="email"
+                id="newsletterEmail"
+                name="email"
+                placeholder="seu@email.com"
+                class="newsletter__input"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="newsletter-feedback"
+              />
+              <button type="submit" class="btn btn--primary newsletter__btn" aria-label="Cadastrar e-mail para receber novidades">
+                Cadastrar
+              </button>
+            </div>
+            <span class="newsletter__feedback" id="newsletter-feedback" role="status" aria-live="polite"></span>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== DOAÇÕES ===== -->
+    <section class="section doacoes" id="doacoes" aria-labelledby="doacoes-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Apoie o Projeto</span>
+          <h2 class="section__title" id="doacoes-title">Ajude a <span class="text-accent">Construir</span> o Futuro</h2>
+          <p class="section__subtitle">Cada contribuição acelera o desenvolvimento e nos aproxima do lançamento.</p>
+        </div>
+
+        <div class="doacoes__story reveal">
+          <div class="doacoes__story-icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="doacoes__story-content">
+            <h3>Por que precisamos da sua ajuda?</h3>
+            <p>
+              O NuviOS é desenvolvido em um computador com hardware limitado, o que torna o processo
+              de compilação, teste e desenvolvimento muito mais lento. Um computador mais potente
+              permitiria compilar o kernel em minutos em vez de horas, rodar múltiplas máquinas
+              virtuais simultaneamente e acelerar drasticamente o ritmo de desenvolvimento.
+            </p>
+            <p>
+              <strong>Toda doação, independente do valor, faz diferença real.</strong> Você não está
+              apenas doando dinheiro — está investindo em um projeto que pode mudar a forma como
+              as pessoas interagem com seus computadores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Meta Progress -->
+        <div class="doacoes__meta reveal" aria-labelledby="meta-title">
+          <div class="meta__header">
+            <h3 class="meta__title" id="meta-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Meta: Novo Computador para Desenvolvimento
+            </h3>
+            <div class="meta__values">
+              <span class="meta__current" id="metaCurrent">R$ 847</span>
+              <span class="meta__separator">/</span>
+              <span class="meta__goal">R$ 4.500</span>
+            </div>
+          </div>
+          <div class="meta__bar-wrapper" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da meta: 18%">
+            <div class="meta__bar" id="metaBar" style="width: 0%"></div>
+          </div>
+          <div class="meta__footer">
+            <span class="meta__percent" id="metaPercent">0%</span>
+            <span class="meta__supporters">23 apoiadores</span>
+          </div>
+        </div>
+
+        <!-- Donation Options -->
+        <div class="doacoes__grid">
+
+          <div class="donation-card reveal" aria-label="Doação via PIX">
+            <div class="donation-card__header">
+              <div class="donation-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <h3 class="donation-card__title">PIX</h3>
+                <span class="donation-card__badge">Instantâneo</span>
+              </div>
+            </div>
+            <p class="donation-card__desc">Transferência instantânea, sem taxas. A forma mais rápida de apoiar diretamente.</p>
+            <!-- EDITE A CHAVE PIX ABAIXO -->
+            <div class="donation-card__pix">
+              <code class="pix-key" id="pixKey">nuvios@email.com</code>
+              <button class="btn-copy" id="copyPix" aria-label="Copiar chave PIX">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copiar
+              </button>
+            </div>
+          </div>
+
+          <!-- EDITE OS LINKS DE DOAÇÃO ABAIXO -->
+          <a href="https://github.com/sponsors/nuvios" target="_blank" rel="noopener noreferrer" class="donation-card donation-card--link reveal" aria-label="Apoiar via GitHub Sponsors">
+            <div class="donation-card__header">
+              <div class="donation-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <h3 class="donation-card__title">GitHub Sponsors</h3>
+                <span class="donation-card__badge">Mensal ou Único</span>
+              </div>
+            </div>
+            <p class="donation-card__desc">Apoie diretamente pelo GitHub com suporte a assinaturas mensais e doações únicas.</p>
+            <span class="donation-card__cta">Apoiar no GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+
+          <a href="https://ko-fi.com/nuvios" target="_blank" rel="noopener noreferrer" class="donation-card donation-card--link reveal" aria-label="Apoiar via Ko-fi">
+            <div class="donation-card__header">
+              <div class="donation-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <div>
+                <h3 class="donation-card__title">Ko-fi</h3>
+                <span class="donation-card__badge">Simples e Rápido</span>
+              </div>
+            </div>
+            <p class="donation-card__desc">Compre um café virtual para o desenvolvedor. Rápido, sem cadastro obrigatório.</p>
+            <span class="donation-card__cta">Apoiar no Ko-fi <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+
+          <a href="https://apoia.se/nuvios" target="_blank" rel="noopener noreferrer" class="donation-card donation-card--link reveal" aria-label="Apoiar via Apoia.se">
+            <div class="donation-card__header">
+              <div class="donation-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <h3 class="donation-card__title">Apoia.se</h3>
+                <span class="donation-card__badge">Plataforma Brasileira</span>
+              </div>
+            </div>
+            <p class="donation-card__desc">Plataforma brasileira de crowdfunding. Suporte em reais com diversas formas de pagamento.</p>
+            <span class="donation-card__cta">Apoiar no Apoia.se <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+
+          <a href="https://patreon.com/nuvios" target="_blank" rel="noopener noreferrer" class="donation-card donation-card--link reveal" aria-label="Apoiar via Patreon">
+            <div class="donation-card__header">
+              <div class="donation-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z"/></svg>
+              </div>
+              <div>
+                <h3 class="donation-card__title">Patreon</h3>
+                <span class="donation-card__badge">Assinatura Mensal</span>
+              </div>
+            </div>
+            <p class="donation-card__desc">Torne-se um patrono e receba atualizações exclusivas sobre o desenvolvimento.</p>
+            <span class="donation-card__cta">Apoiar no Patreon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Dúvidas</span>
+          <h2 class="section__title" id="faq-title">Perguntas <span class="text-accent">Frequentes</span></h2>
+          <p class="section__subtitle">Tudo que você precisa saber sobre o NuviOS.</p>
+        </div>
+
+        <div class="faq__list reveal" role="list" aria-label="Lista de perguntas frequentes">
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-1">
+              <span>O que é o NuviOS?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-1" hidden>
+              <p>O NuviOS é um sistema operacional em desenvolvimento criado de forma independente, com foco em desempenho, interface moderna e experiência otimizada para jogos. É um projeto construído do zero, sem herdar limitações de sistemas tradicionais.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-2">
+              <span>O NuviOS é baseado em Linux?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-2" hidden>
+              <p>O NuviOS está sendo desenvolvido com um kernel próprio. A meta é criar algo genuinamente independente, embora durante as fases iniciais de desenvolvimento possam ser utilizadas tecnologias open source como base de aprendizado e prototipagem.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-3">
+              <span>Quando o NuviOS estará disponível para download?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-3" hidden>
+              <p>A primeira versão testável (Alpha) está prevista para quando o desenvolvimento do kernel e da interface básica estiverem concluídos. Acompanhe o Roadmap nesta página para ver o progresso atual. Cadastre-se na newsletter para ser notificado quando o Alpha estiver disponível.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-4">
+              <span>O NuviOS será gratuito?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-4" hidden>
+              <p>Sim. O NuviOS será gratuito e open source. A sustentabilidade do projeto depende de doações voluntárias da comunidade, não de licenciamento pago. Acreditamos que tecnologia de qualidade deve ser acessível a todos.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-5">
+              <span>Em quais arquiteturas o NuviOS funcionará?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-5" hidden>
+              <p>O foco inicial é na arquitetura x86-64, que abrange a grande maioria dos computadores desktop e notebooks modernos. Suporte a ARM (incluindo Apple Silicon) é considerado para versões futuras.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-6">
+              <span>Posso contribuir com o desenvolvimento?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-6" hidden>
+              <p>Com certeza! O projeto aceita contribuições de desenvolvedores, designers, testadores e entusiastas. Você pode contribuir com código no GitHub, participar das discussões no Discord, reportar bugs, sugerir funcionalidades ou simplesmente divulgar o projeto.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-7">
+              <span>Por que o projeto precisa de doações?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-7" hidden>
+              <p>O desenvolvimento de um sistema operacional exige hardware poderoso para compilar o kernel, rodar máquinas virtuais de teste e simular diferentes configurações. O hardware atual limita a velocidade de desenvolvimento. As doações serão usadas para adquirir um computador mais potente e acelerar significativamente o progresso.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-8">
+              <span>O NuviOS substituirá o Windows ou Linux?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-8" hidden>
+              <p>O NuviOS não tem o objetivo de "substituir" nenhum sistema existente, mas sim oferecer uma alternativa genuína para usuários que buscam desempenho máximo e uma experiência focada em jogos. Ele pode coexistir com outros sistemas em dual boot.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-9">
+              <span>Quais jogos serão compatíveis com o NuviOS?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-9" hidden>
+              <p>A meta é oferecer compatibilidade ampla com jogos, incluindo suporte nativo a APIs gráficas modernas como Vulkan e OpenGL, além de camadas de compatibilidade para jogos desenvolvidos para outros sistemas. A loja nativa também facilitará o acesso a jogos otimizados para o NuviOS.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-10">
+              <span>Como posso acompanhar o progresso do desenvolvimento?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-10" hidden>
+              <p>Você pode acompanhar o progresso pelo Roadmap nesta página, pelo repositório no GitHub, pelos vídeos no YouTube e pelas atualizações no Discord e nas redes sociais. Cadastre-se também na newsletter para receber atualizações diretamente no seu e-mail.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-11">
+              <span>O NuviOS terá suporte a drivers de hardware?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-11" hidden>
+              <p>Sim. O suporte a drivers é uma das prioridades do desenvolvimento. A fase do Kernel no Roadmap inclui o desenvolvimento de drivers essenciais. Haverá também um sistema de drivers da comunidade para ampliar a compatibilidade com hardware diverso.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-12">
+              <span>Qual linguagem de programação é usada no NuviOS?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-12" hidden>
+              <p>O kernel e os componentes de baixo nível são desenvolvidos principalmente em C e Assembly. A interface gráfica e as ferramentas de usuário utilizam linguagens modernas como C++ e possivelmente Rust para componentes críticos de segurança.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-13">
+              <span>O NuviOS terá uma loja de aplicativos?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-13" hidden>
+              <p>Sim! A Loja é uma das etapas do Roadmap. Será uma loja nativa com curadoria de aplicativos, instalação simplificada, atualizações automáticas e sistema de avaliações da comunidade. Desenvolvedores poderão publicar seus aplicativos diretamente.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-14">
+              <span>Posso testar o NuviOS agora?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-14" hidden>
+              <p>Ainda não. O projeto está nas fases iniciais de desenvolvimento. A primeira versão testável (Alpha) será disponibilizada quando o sistema atingir um nível mínimo de funcionalidade. Cadastre-se na newsletter para ser notificado quando isso acontecer.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-15">
+              <span>Como posso entrar em contato com a equipe do NuviOS?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq__answer" id="faq-15" hidden>
+              <p>Você pode entrar em contato pelo formulário nesta página, pelo Discord da comunidade, pelo e-mail oficial ou pelas redes sociais do projeto. Respondemos todas as mensagens, embora o tempo de resposta possa variar conforme a demanda do desenvolvimento.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section contato" id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Fale Conosco</span>
+          <h2 class="section__title" id="contato-title">Entre em <span class="text-accent">Contato</span></h2>
+          <p class="section__subtitle">Tem uma dúvida, sugestão ou quer colaborar? Fale com a gente.</p>
+        </div>
+
+        <div class="contato__grid">
+          <div class="contato__info reveal">
+            <div class="contato__item">
+              <div class="contato__item-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>E-mail</strong>
+                <!-- EDITE O E-MAIL ABAIXO -->
+                <a href="mailto:contato@nuvios.dev" aria-label="Enviar e-mail para contato@nuvios.dev">contato@nuvios.dev</a>
+              </div>
+            </div>
+            <div class="contato__item">
+              <div class="contato__item-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.056a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" fill="#00d4ff"/></svg>
+              </div>
+              <div>
+                <strong>Discord</strong>
+                <!-- EDITE O LINK DO DISCORD ABAIXO -->
+                <a href="https://discord.gg/nuvios" target="_blank" rel="noopener noreferrer" aria-label="Entrar no Discord do NuviOS">discord.gg/nuvios</a>
+              </div>
+            </div>
+            <div class="contato__item">
+              <div class="contato__item-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#00d4ff"/></svg>
+              </div>
+              <div>
+                <strong>GitHub</strong>
+                <!-- EDITE O LINK DO GITHUB ABAIXO -->
+                <a href="https://github.com/nuvios" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do NuviOS no GitHub">github.com/nuvios</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contato__form reveal reveal--right" id="contactForm" novalidate aria-label="Formulário de contato">
+            <div class="form__group">
+              <label for="contactName" class="form__label">Nome <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="contactName"
+                name="name"
+                class="form__input"
+                placeholder="Seu nome completo"
+                required
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="name-error"
+              />
+              <span class="form__error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="contactEmail" class="form__label">E-mail <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="email"
+                class="form__input"
+                placeholder="seu@email.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-error"
+              />
+              <span class="form__error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="contactSubject" class="form__label">Assunto</label>
+              <select id="contactSubject" name="subject" class="form__input form__select" aria-label="Selecione o assunto da mensagem">
+                <option value="">Selecione um assunto</option>
+                <option value="sugestao">Sugestão de funcionalidade</option>
+                <option value="contribuicao">Quero contribuir com o projeto</option>
+                <option value="parceria">Proposta de parceria</option>
+                <option value="imprensa">Imprensa / Mídia</option>
+                <option value="duvida">Dúvida geral</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="contactMessage" class="form__label">Mensagem <span aria-hidden="true">*</span></label>
+              <textarea
+                id="contactMessage"
+                name="message"
+                class="form__input form__textarea"
+                placeholder="Escreva sua mensagem aqui..."
+                rows="5"
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+              ></textarea>
+              <span class="form__error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit" aria-label="Enviar mensagem de contato">
+              <span>Enviar Mensagem</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form__success" id="formSuccess" role="status" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Mensagem enviada com sucesso! Responderemos em breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container footer__grid">
+
+        <div class="footer__brand">
+          <a href="#inicio" class="nav__logo footer__logo" aria-label="NuviOS - Voltar ao início">
+            <img src="img/logo-oficial.png" alt="NuviOS Logo" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">O Sistema Operacional do Futuro. Construído com paixão, para a comunidade.</p>
+          <div class="footer__social" aria-label="Redes sociais do NuviOS">
+            <!-- EDITE OS LINKS ABAIXO -->
+            <a href="https://github.com/nuvios" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub do NuviOS">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://discord.gg/nuvios" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Discord do NuviOS">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.056a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            </a>
+            <a href="https://youtube.com/@nuvios" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="YouTube do NuviOS">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://instagram.com/nuvios" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram do NuviOS">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://x.com/nuvios" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="X do NuviOS">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Links rápidos do rodapé">
+          <h4 class="footer__nav-title">Navegação</h4>
+          <ul role="list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Links de comunidade do rodapé">
+          <h4 class="footer__nav-title">Comunidade</h4>
+          <ul role="list">
+            <li><a href="#comunidade">Comunidade</a></li>
+            <li><a href="#doacoes">Doações</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <!-- EDITE OS LINKS ABAIXO -->
+            <li><a href="https://github.com/nuvios" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__newsletter">
+          <h4 class="footer__nav-title">Newsletter</h4>
+          <p>Receba atualizações do NuviOS diretamente no seu e-mail.</p>
+          <form class="footer__form" id="footerNewsletterForm" novalidate aria-label="Formulário de newsletter do rodapé">
+            <label for="footerEmail" class="sr-only">Seu e-mail para newsletter</label>
+            <input type="email" id="footerEmail" name="email" placeholder="seu@email.com" class="footer__input" required autocomplete="email" aria-required="true" />
+            <button type="submit" class="footer__submit" aria-label="Cadastrar e-mail na newsletter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">
+          &copy; <span id="footerYear"></span> NuviOS. Todos os direitos reservados.
+          Desenvolvido com paixão por um desenvolvedor independente.
+        </p>
+        <p class="footer__made">
+          Feito com
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#00d4ff" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          para a comunidade
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Screen reader only utility class -->
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
