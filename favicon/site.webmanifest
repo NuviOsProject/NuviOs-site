@@ -1,0 +1,15 @@
+{
+  "name": "NuviOS - O Sistema Operacional do Futuro",
+  "short_name": "NuviOS",
+  "icons": [
+    {
+      "src": "/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#00d4ff",
+  "background_color": "#050508",
+  "display": "standalone",
+  "start_url": "/"
+}
